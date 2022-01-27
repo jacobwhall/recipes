@@ -74,6 +74,12 @@
 		<form action="/edit-recipe.php">
 			<button>Create new recipe</button>
 		</form>
-		Made with ❤️ by <a href="https://jacobhall.net">Jacob</a> using <a href="https://github.com/picocss/pico">Pico.css</a>, <a href="https://github.com/erusev/parsedown">Parsedown</a>, and <a href="https://joeldare.com/why-im-using-http-basic-auth-in-2022.html">HTTP Basic Auth</a></footer>
+		<p>
+		Made with ❤️ by <a href="https://jacobhall.net">Jacob</a> using <a href="https://github.com/picocss/pico">Pico.css</a>, <a href="https://github.com/erusev/parsedown">Parsedown</a>, and <a href="https://joeldare.com/why-im-using-http-basic-auth-in-2022.html">HTTP Basic Auth</a>
+		</p>
+		<p>
+		View source <a href="https://github.com/jacobwhall/recipes/">on GitHub</a>
+		</p>
+		</footer>
 	</body>
 </html>
