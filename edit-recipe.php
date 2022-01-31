@@ -20,10 +20,10 @@
 			newField.innerHTML = fieldHTML;
 			inspContainer.appendChild(newField);
 		}
-		function addTag(){
+		function addTag(name = ""){
 			tagContainer = document.getElementById("tag-container");
 			var newField = document.createElement("tr");
-			newField.innerHTML = "<td><input type=\"text\" name=\"tags[]\"></td><td><a onclick=\"this.parentElement.parentElement.remove()\">delete</a></td>";
+			newField.innerHTML = "<td><input type=\"text\" name=\"tags[]\" value=\""+name+"\"></td><td><a onclick=\"this.parentElement.parentElement.remove()\">delete</a></td>";
 			tagContainer.appendChild(newField);
 		}
 		 function selectText(containerid) {
@@ -50,7 +50,7 @@
 }
         ?>
 	</head>
-	<body>
+	<?php if (!$e) echo "<body onload=\"addTag('vegan')\">"; else echo "<body>"; ?>
 		<main>
 			<h1>Editing a Recipe!</h1>
 			<p>Please note that you will need a valid username and password to submit these changes!</p>

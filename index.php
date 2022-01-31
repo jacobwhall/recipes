@@ -50,14 +50,23 @@
 		}
 		function initialize() {
 			html_list = [];
-			for (let tag of recipes.map(r => r[2]).flat()) {
-				var tag_html = "<a onclick=\"toggle_tag(this);\">"+tag+"</a>";
+			tag_list = recipes.map(r => r[2]).flat().sort();
+			for (let tag of tag_list) {
+				if (tag == "vegan") {
+					var tag_html = "<a onclick=\"toggle_tag(this);\" class=\"default-tag\">"+tag+"</a>";
+				} else {
+					var tag_html = "<a onclick=\"toggle_tag(this);\">"+tag+"</a>";
+				}
 				if (html_list.indexOf(tag_html) == -1 && tag != null) {
 					html_list.push(tag_html);
 				}
 			}
 			document.getElementById('tags').innerHTML = html_list.join(", ");
 			tabulate();
+			var default_tags = document.getElementsByClassName("default-tag");
+			for (let default_tag of default_tags) {
+				toggle_tag(default_tag);
+			}
 		}
 		</script>
 	</head>
