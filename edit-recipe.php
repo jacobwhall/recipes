@@ -81,8 +81,12 @@
         } ?>>
 				<h2>Ingredients</h2>
 				<p>
+					<kbd onclick="selectText(this);">⅕</kbd>&numsp;
 					<kbd onclick="selectText(this);">¼</kbd>&numsp;
+					<kbd onclick="selectText(this);">⅓</kbd>&numsp;
+					<kbd onclick="selectText(this);">⅖</kbd>&numsp;
 					<kbd onclick="selectText(this);">½</kbd>&numsp;
+					<kbd onclick="selectText(this);">⅔</kbd>&numsp;
 					<kbd onclick="selectText(this);">¾</kbd>&numsp;
 				</p>
 				<table id="ingr-container">
